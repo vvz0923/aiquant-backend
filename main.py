@@ -28,8 +28,7 @@ def get_balance(req: APIRequest):
             req.secret_key
         )
 
-        balances =
-            client.futures_account_balance()
+        balances=client.futures_account_balance()
 
         usdt_balance = 0
 
@@ -37,8 +36,7 @@ def get_balance(req: APIRequest):
 
             if asset["asset"] == "USDT":
 
-                usdt_balance =
-                    asset["balance"]
+                usdt_balance =asset["balance"]
 
         return {
             "balance": usdt_balance
